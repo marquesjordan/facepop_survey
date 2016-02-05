@@ -1,0 +1,17 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Survey</h1>
+
+    <% @questions.each do |question| %>
+      <div>
+        <%= question.question %>
+        <div class="container">
+          <% for answer in question.answers %>
+            <%= answer.answer %> <br>
+            <%= link_to answer.answer, survey_answers_path(:answer_id => answer), class: "btn btn-info btn-block", remote: true  %>
+          <% end %>
+        </div>  
+      </div>
+    <% end %>
+
+<br>

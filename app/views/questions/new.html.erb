@@ -1,0 +1,31 @@
+
+<div class="container">
+
+	<% if flash[:notice] %>
+	    <div class="notice"><h3><%= flash[:notice] %></h3></div>
+	<% end %>
+	<h1>Create New Question</h1>
+
+	<%= nested_form_for @question do |f| %>
+		<br>
+		Question: <%= f.text_area :question, class: "form-control" %><br/>
+		<div class="field">
+		    <%= f.label :active %><br>
+		    <%= f.check_box :active %>
+		</div>
+		
+		<%= f.fields_for :answers do |builder| %>
+			<p>	
+				Answer: <%= builder.text_field :answer, class: "form-control" %>
+				<%= builder.link_to_remove "Remove this answer" %><br/>
+			</p>
+		<% end %>
+		<p><%= f.link_to_add "Add a answer +", :answers, class: "btn btn-primary btn-xs" %></p><br>
+
+
+	<%= f.submit "Submit Question", class: "btn btn-danger" %>
+
+	<% end %>
+	<br>
+	<%= link_to "Back to Question List", questions_path %>
+</div>
