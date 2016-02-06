@@ -6,6 +6,8 @@ class SurveyAnswersController < ApplicationController
   def index
     #@survey_answers = SurveyAnswer.all
     @questions = Question.where(:active => true)
+    last_vote = @questions.first.survey_answers.last.vote_id
+    @current_vote = last_vote + 1;
     @visitor = Visitor.new
   end
 

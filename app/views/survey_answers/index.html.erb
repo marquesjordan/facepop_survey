@@ -11,7 +11,7 @@
         <span style="font-size: 25px"><%= question.question %></span>
         <div class="container">
           <% for answer in question.answers %>
-            <%= link_to answer.answer, survey_answers_path(:vote_id => 2, :question_id => question.id, :answer_id => answer.id), method: :post, class: "btn btn-info btn-block", remote: true %>
+            <%= link_to answer.answer, survey_answers_path(:vote_id => @current_vote, :question_id => question.id, :answer_id => answer.id), method: :post, class: "btn btn-info btn-block", remote: true %>
           <% end %>
         </div>  
       </div>
