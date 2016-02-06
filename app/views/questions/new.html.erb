@@ -11,7 +11,7 @@
 		Question: <%= f.text_area :question, class: "form-control" %><br/>
 		<div class="field">
 		    <%= f.label :active %><br>
-		    <%= f.check_box :active %>
+		    <%= f.check_box :active, class: "form-control" %>
 		</div>
 		
 		<%= f.fields_for :answers do |builder| %>

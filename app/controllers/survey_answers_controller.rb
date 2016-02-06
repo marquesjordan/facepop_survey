@@ -6,6 +6,7 @@ class SurveyAnswersController < ApplicationController
   def index
     #@survey_answers = SurveyAnswer.all
     @questions = Question.where(:active => true)
+    @visitor = Visitor.new
   end
 
   # GET /survey_answers/1
