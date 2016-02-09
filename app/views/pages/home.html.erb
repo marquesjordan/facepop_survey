@@ -28,7 +28,6 @@
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
         <h1 class="modal-title" id="myModalLabel">Please Enter Your Information</h1>
       </div>
       <%= form_for(@visitor, remote: true) do |f| %>
@@ -47,18 +46,10 @@
             <% end %>
 
             <div class="field">
-              <%= select_tag(:age, options_for_select(
-                [
-                  ['15 or lower', '15 or lower'], ['16 - 20', '16 - 20'], 
-                  ['21 - 25', '21 - 25'], ['26 - 30', '26 - 30'], 
-                  ['31 - 35', '31 - 35'], ['36 or higher', '36 or higher']   
-                ]), :required => true, :prompt => "Select Age Group", class: "form-control input-lg") %>
+                <%= f.select :age, options_for_select(["15 or lower", "16 - 20", "21 - 25", "26 - 30", "31 - 35", "36 or higher"]), {prompt: "Select Age Group"}, {required: true, class: 'form-control input-lg'} %>
             </div>
             <div class="field">
-              <%= select_tag(:gender, options_for_select(
-                [
-                  ['Male', "Male"], ['Female', "Female"]
-                ]), :required => true, :prompt => "Select Gender", class: "form-control input-lg" ) %>
+                <%= f.select :gender, options_for_select(["Male", "Female"]), {prompt: "Select Gender"}, {required: true, class: 'form-control input-lg'} %>
             </div>
             <div class="field">
               <%= f.text_field :email, :required => true, :pattern => '[^@]+@[^@]+\.[a-zA-Z]{2,6}', :placeholder => "Enter Your Email", class: "form-control input-lg" %>

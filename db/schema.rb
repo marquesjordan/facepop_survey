@@ -11,14 +11,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160209044915) do
+ActiveRecord::Schema.define(version: 20160209061155) do
 
   create_table "answers", force: :cascade do |t|
     t.string   "answer"
     t.integer  "votes",       default: 0
-    t.float    "vote_ratio",  default: 0.0
-    t.datetime "created_at",                null: false
-    t.datetime "updated_at",                null: false
+    t.datetime "created_at",              null: false
+    t.datetime "updated_at",              null: false
     t.integer  "question_id"
   end
 
@@ -38,6 +37,8 @@ ActiveRecord::Schema.define(version: 20160209044915) do
     t.datetime "updated_at",  null: false
     t.integer  "question_id"
     t.integer  "answer_id"
+    t.string   "gender"
+    t.string   "age"
   end
 
   add_index "survey_answers", ["answer_id"], name: "index_survey_answers_on_answer_id"

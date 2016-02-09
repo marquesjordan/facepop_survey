@@ -27,7 +27,10 @@ class SurveyAnswersController < ApplicationController
   # POST /survey_answers.json
   def create
     @survey_answer = SurveyAnswer.new(:vote_id => params[:vote_id], :question_id => params[:question_id], :answer_id => params[:answer_id])
+    visitor = Visitor.last 
 
+    @survey_answer.gender = visitor.gender
+    @survey_answer.age = visitor.age
     respond_to do |format|
       if @survey_answer.save
 
@@ -35,7 +38,6 @@ class SurveyAnswersController < ApplicationController
         cur_answer = Answer.find(params[:answer_id])
         cur_question.votes += 1
         cur_answer.votes += 1
-        cur_answer.vote_ratio = ( cur_answer.votes.to_f / cur_question.votes)
         cur_question.save
         cur_answer.save
 
@@ -43,9 +45,8 @@ class SurveyAnswersController < ApplicationController
         format.json { render :show, status: :created, location: @survey_answer }
         format.js
       else
-        format.html { render :new }
+        format.html { redirect_to root_path, notice: 'Must Complete The Following Before The Survey.' }
         format.json { render json: @survey_answer.errors, status: :unprocessable_entity }
-        format.js
       end
     end
   end
@@ -82,6 +83,6 @@ class SurveyAnswersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def survey_answer_params
-      params.require(:survey_answer).permit(:vote_id, :question_id, :answer_id)
+      params.require(:survey_answer).permit(:vote_id, :question_id, :answer_id, :gender, :age)
     end
 end
