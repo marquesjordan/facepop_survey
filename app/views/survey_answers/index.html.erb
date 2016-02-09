@@ -23,17 +23,17 @@
             <tr>
               <td><%= answer.answer %></td>
               <td><%= answer.votes %></td>    
-              <td><%= (answer.votes.to_f / question.votes).round(2) %></td>
+              <td><%= ( (answer.votes.to_f / question.votes) * 100 ).round(0) %>%</td>
               <td>
-                  Male: <%= (SurveyAnswer.where(:gender => 'Male').count.to_f / question.votes).round(2) %>
-                  Female: <%= (SurveyAnswer.where(:gender => 'Female').count.to_f / question.votes).round(2) %>
+                  Male: <%= ( (SurveyAnswer.where(:gender => 'Male').count.to_f / question.votes) * 100 ).round(0) %>%
+                  Female: <%= ( (SurveyAnswer.where(:gender => 'Female').count.to_f / question.votes) * 100 ).round(0) %>%
               </td>
-              <td><%= (SurveyAnswer.where(:age => '15 or lower').count.to_f / question.votes).round(2) %></td>
-              <td><%= (SurveyAnswer.where(:age => '16 - 20').count.to_f / question.votes).round(2) %></td>
-              <td><%= (SurveyAnswer.where(:age => '21 - 25').count.to_f / question.votes).round(2) %></td>
-              <td><%= (SurveyAnswer.where(:age => '26 - 30').count.to_f / question.votes).round(2) %></td>
-              <td><%= (SurveyAnswer.where(:age => '31 - 35').count.to_f / question.votes).round(2) %></td>
-              <td><%= (SurveyAnswer.where(:age => '36 or higher').count.to_f / question.votes).round(2) %></td>
+              <td><%= ( (SurveyAnswer.where(:age => '15 or lower').count.to_f / question.votes) * 100 ).round(0) %>%</td>
+              <td><%= ( (SurveyAnswer.where(:age => '16 - 20').count.to_f / question.votes) * 100 ).round(0) %>%</td>
+              <td><%= ( (SurveyAnswer.where(:age => '21 - 25').count.to_f / question.votes) * 100 ).round(0) %>%</td>
+              <td><%= ( (SurveyAnswer.where(:age => '26 - 30').count.to_f / question.votes) * 100 ).round(0) %>%</td>
+              <td><%= ( (SurveyAnswer.where(:age => '31 - 35').count.to_f / question.votes) * 100 ).round(0) %>%</td>
+              <td><%= ( (SurveyAnswer.where(:age => '36 or higher').count.to_f / question.votes) * 100 ).round(0) %>%</td>
             </tr>
         <% end %>
       </table>
