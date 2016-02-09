@@ -4,11 +4,8 @@ class SurveyAnswersController < ApplicationController
   # GET /survey_answers
   # GET /survey_answers.json
   def index
-    #@survey_answers = SurveyAnswer.all
-    @questions = Question.where(:active => true)
-    last_vote = @questions.first.survey_answers.last.vote_id
-    @current_vote = last_vote + 1;
-    @visitor = Visitor.new
+    @questions = Question.all
+    @survey_answers = SurveyAnswer.all
   end
 
   # GET /survey_answers/1
@@ -33,6 +30,15 @@ class SurveyAnswersController < ApplicationController
 
     respond_to do |format|
       if @survey_answer.save
+
+        cur_question = Question.find(params[:question_id])
+        cur_answer = Answer.find(params[:answer_id])
+        cur_question.votes += 1
+        cur_answer.votes += 1
+        cur_answer.vote_ratio = ( cur_answer.votes.to_f / cur_question.votes)
+        cur_question.save
+        cur_answer.save
+
         format.html { redirect_to @survey_answer, notice: 'Survey answer was successfully created.' }
         format.json { render :show, status: :created, location: @survey_answer }
         format.js

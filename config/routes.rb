@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
   
+  root 'pages#home'
+
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
-  root 'survey_answers#index'
+
   resources :survey_answers
   resources :answers
   resources :questions
