@@ -4,7 +4,7 @@ class SurveyAnswersController < ApplicationController
   # GET /survey_answers
   # GET /survey_answers.json
   def index
-    @questions = Question.all
+    @questions = Question.where(:active => true)
     @survey_answers = SurveyAnswer.all
   end
 
