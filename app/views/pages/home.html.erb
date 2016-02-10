@@ -32,7 +32,7 @@
       </div>
       <%= form_for(@visitor, remote: true) do |f| %>
 
-        <div class="modal-body container">
+        <div class="modal-body">
             <% if @visitor.errors.any? %>
               <div id="error_explanation">
                 <h2><%= pluralize(@visitor.errors.count, "error") %> prohibited this visitor from being saved:</h2>
@@ -46,7 +46,7 @@
             <% end %>
 
             <div class="field">
-                <%= f.select :age, options_for_select(["15 or lower", "16 - 20", "21 - 25", "26 - 30", "31 - 35", "36 or higher"]), {prompt: "Select Age Group"}, {required: true, class: 'form-control input-lg'} %>
+                <%= f.select :age, options_for_select(["15 or lower", "16 - 35", "36 or higher"]), {prompt: "Select Age Group"}, {required: true, class: 'form-control input-lg'} %>
             </div>
             <div class="field">
                 <%= f.select :gender, options_for_select(["Male", "Female"]), {prompt: "Select Gender"}, {required: true, class: 'form-control input-lg'} %>
