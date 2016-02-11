@@ -1,34 +1,15 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Survey</h1>
-
-
-  <div class="survey-slider">
-    
-    <% @questions.each do |question| %>
-    <div>
-      <div id="question_<%= question.id %>" style="text-align: center">
-        <span style="font-size: 25px"><%= question.question %></span>
-        <div class="container">
-          <% for answer in question.answers %>
-            <%= link_to answer.answer, survey_answers_path(:vote_id => @current_vote, :question_id => question.id, :answer_id => answer.id), method: :post, class: "btn btn-info btn-block", remote: true %>
-          <% end %>
-        </div>  
-      </div>
-    </div>
-    <% end %>
-    <div style="text-align: center;">
-      <span style="font-size: 30px;">THANK YOU</span>
-    </div>
-  </div>
-<br>
+<%= render "pages/product" %>
+<%= render "pages/survey" %>
+<%= render "pages/team" %>
 
 <!-- Modal -->
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h1 class="modal-title" id="myModalLabel">Please Enter Your Information</h1>
+        <h1 class="modal-title" id="myModalLabel">Welcome</h1>
       </div>
       <%= form_for(@visitor, remote: true) do |f| %>
 
@@ -63,7 +44,7 @@
           
         </div>
         <div class="modal-footer">
-          <%= f.submit 'Submit', :class => "btn btn-danger" %>
+          <%= f.submit 'Submit', :class => "btn btn-primary" %>
         </div>
       <% end %>
 
