@@ -8,14 +8,28 @@
         src: url(/assets/A-Love-of-Thunder.ttf) format("truetype");
     }
 
+@font-face {
+        font-family: "Arial Rounded";
+        src: url(/assets/Arial-Rounded-MT-Regular.ttf) format("truetype");
+    }
+
+body {
+	font-family: "Arial Rounded";
+}
+
+div p {
+	line-height: 1.4;
+}
+
+
 .page-title {
 	font-family: "A Love of Thunder";
-	font-size: 44px;
+	font-size: 136px;
 	text-align: center;
 }
 
 section {
-	padding: 30px 10px;
+	padding: 30px 60px;
 }
 
 .survey-section {
