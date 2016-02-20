@@ -26,6 +26,11 @@ nav.navbar {
 	margin-bottom: 0 !important;
 }
 
+.blink_me {
+	color:red; 
+	font-size:40px; 
+	font-family: "A Love of Thunder";
+}
 
 .page-title {
 	font-family: "A Love of Thunder";
@@ -68,7 +73,7 @@ section {
 	color: orange;
 }
 
-.product-content p {
+div p {
 	text-align: center;
 	font-size: 20px;
 }
@@ -78,14 +83,27 @@ section {
 	font-size: 20px;
 }
 
-.product-video {
+.product-section {
+	color: #5F5D5D;
+}
+
+.product-video-container {
 	text-align: center;
 	position: relative;
 	margin-top: 10px;
 }
 
+.product-video {
+	width: 420px;
+}
+
 .product-question {
 	height: 84px;
+}
+
+.contact-section {
+	background-color: #5F5D5D;
+	color: #FFFFFF;
 }
 
 .play-button {
@@ -96,6 +114,20 @@ section {
 	bottom: 30px;
 }
 
+.team-bio {
+	text-align: center;
+	font-size: 20px;
+	padding-top: 30px;
+}
+
+.social {
+	text-align: center;
+}
+
+.social-links {
+	padding: 0 5px;
+}
+
 @media only screen and (max-width: 675px) {
 	.page-title {
 		font-size: 90px;
@@ -104,7 +136,11 @@ section {
 
 @media only screen and (max-width: 480px) {
 	.page-title {
-		font-size: 79px;
+		font-size: 73px;
+	}
+
+	.product-video {
+		width: 340px;
 	}
 
 	section {

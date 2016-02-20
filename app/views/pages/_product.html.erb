@@ -1,4 +1,4 @@
-<section>
+<section class="product-section">
   <div class="page-title">
     PRODUCT
   </div>
@@ -23,8 +23,8 @@
 		  		ARE THEY GIFs?<br>
 				No, Yuck!
 		  	</p>
-        <div class="product-video">
-          <video id="video105" width="420">
+        <div class="product-video-container">
+          <video id="video105" class="product-video">
             <source src="https://s3-us-west-2.amazonaws.com/facepop/video/video-105.mp4" type="video/mp4">
             Your browser does not support HTML5 video.
           </video>
@@ -36,21 +36,21 @@
 		  		ARE THEY MEMES OR PHOTOS OF YOUR HEAD?<br>
 				No Way!
 		  	</p>
-        <div class="product-video">
-          <video id="video40" width="420">
+        <div class="product-video-container">
+          <video id="video40" class="product-video">
             <source src="https://s3-us-west-2.amazonaws.com/facepop/video/video-40.mp4" type="video/mp4">
             Your browser does not support HTML5 video.
           </video>
           <img id="40" class="play-button" onClick="playPause('video'+this.id)" src="https://s3-us-west-2.amazonaws.com/facepop/play-button.png">
         </div>
   		</div>
-  		<div class="col-md-4 product-video">
+  		<div class="col-md-4">
   			<p class="product-question">
 		  		ARE THEY ANIMATED EMOJIS?<br>
 				Nope!
 		  	</p>
-        <div class="product-video">
-          <video id="video83" width="420">
+        <div class="product-video-container">
+          <video id="video83" class="product-video">
             <source src="https://s3-us-west-2.amazonaws.com/facepop/video/video-83.mp4" type="video/mp4">
             Your browser does not support HTML5 video.
           </video>
@@ -58,7 +58,16 @@
         </div>
   		</div>
   	</div>
-
+    <hr>
+    <p>
+      <b>FACEPOP IS THE NEW COOL KID ON THE BLOCK WITH INTENSE FOCUS TO SPARK A NEW MESSAGING TREND</b>
+    </p><hr>
+    <p>
+      <b>WE WELCOME YOU TO JOIN US AND SHAKE UP THE WORLD OF MESSAGING WITH A COMMUNICATION TOOL GEARED TO IMPROVE CONSICENESS, CLARITY AND EFFICIENCY</b>
+    </p><hr>
+    <p>
+      <b>LET’S GET FACEPOPPIN’</b>
+    </p>
 
   </div>
 
@@ -66,7 +75,6 @@
 
 <script> 
 function playPause(clicked_id) { 
-    debugger;
     var myVideo = document.getElementById(clicked_id); 
 
     if (myVideo.paused) 
