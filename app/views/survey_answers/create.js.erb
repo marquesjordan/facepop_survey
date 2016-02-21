@@ -2,3 +2,12 @@
 $("#question_<%= @survey_answer.question_id %>").fadeOut(500);
 
 $('.survey-slider').slick('slickNext');
+
+var total = $(".survey-slider").slick("getSlick").slideCount;
+
+var question = $('.survey-slider').slick('slickCurrentSlide');
+$('#question-number').html(question+1);
+
+if((question+1) == total) {
+	$('#question-counter').hide();
+}

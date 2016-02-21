@@ -8,12 +8,13 @@
 			CAN MAKE FACEPOP UNDENIABLE!
 		</p>
 	</div>
+  <hr>
   <div class="survey-slider">    
-    <% @questions.each do |question| %>
+    <% @questions.each_with_index do |question, index| %>
     <div>
       <div id="question_<%= question.id %>" style="text-align: center">
         <span style="font-size: 25px"><%= question.question %></span>
-        <div class="container">
+        <div class="container" style="width:55%;">
           <% for answer in question.answers %>
             <%= link_to answer.answer, survey_answers_path(:vote_id => @current_vote, :question_id => question.id, :answer_id => answer.id), method: :post, class: "btn btn-info btn-block", remote: true %>
           <% end %>
@@ -26,5 +27,10 @@
       WE THANK YOU FOR COMPLETING OUR<br>
 		CONSUMER ANALYSIS SURVEY!</span>
     </div>
+  </div>
+  <div id="question-counter" class="question-counter">
+    <p>
+      Question <span id="question-number">1</span> of <%= @questions.count %>
+    </p>
   </div>
 </section>
