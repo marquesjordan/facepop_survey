@@ -51,6 +51,16 @@ section {
 	margin: auto;
 }
 
+.phone {
+	background-image: url('https://s3-us-west-2.amazonaws.com/facepop/android.png');
+	background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center; 
+	height: 400px;
+	width: 400px;
+	margin: auto;
+}
+
 .hero-section {
 	background-image: url('https://s3-us-west-2.amazonaws.com/facepop/fp_logo.png');
     background-repeat: no-repeat;
@@ -145,5 +155,9 @@ div p {
 
 	section {
 		padding: 30px 15px;
+	}
+
+	.play-button {
+		left: 50px;
 	}
 }
