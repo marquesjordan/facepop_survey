@@ -4,15 +4,21 @@
   </div>
   <div class="product-content">
   	<p>
-  		YOUR MESSAGING EXPERIENCE WILL ELEVATE WITH SNAPPY
-		TALKING HEAD VIDEOS (THVs) FEATURING YOU!
+  		WE ARE A FLEDGLING MOBILE APPLICATION MOTIVATED TO RESHAPEYOUR MESSAGING EXPERIENCE WITH A RECOGNIZABLE VISUAL EFFECT; THE TALKING HEAD.
   	</p><hr>
   	<p>
-  		CREATE AND SHARE YOUR THV FOR CUSTOMERS, CLIENTS,
-		BUSINESS PARTNERS, FRIENDS & FAMILY
+  		FACEPOP WILL ALLOW USERS TO CREATE AND SHARE SELF-MADE TALKING HEAD VIDEOS VIA TEXT MESSAGING AND/OR SOCIAL MEDIA PLATFORMS.
   	</p>
-        <div class="phone">
-      
+    <div class="phone">
+    	<div class="product-phone-video-container">
+	      <div class="video-mask-phone ">
+	        <video id="video25" class="product-video-phone">
+	          <source src="https://s3-us-west-2.amazonaws.com/facepop/video/video-25.mp4" type="video/mp4">
+	          Your browser does not support HTML5 video.
+	        </video>
+	        <img id="25" class="play-button-phone" onClick="playPause(this.id)" src="https://s3-us-west-2.amazonaws.com/facepop/play-button.png">
+	      </div>
+	    </div>
     </div>
     <hr>
   	<p>
@@ -24,41 +30,44 @@
   	<div class="row">
   		<div class="col-md-4">
   			<p class="product-question">
-		  		ARE THEY GIFs?<br>
-				No, Yuck!
+		  		ARE THEY GIFs?
 		  	</p>
         <div class="product-video-container">
-          <video id="video105" class="product-video">
-            <source src="https://s3-us-west-2.amazonaws.com/facepop/video/video-105.mp4" type="video/mp4">
-            Your browser does not support HTML5 video.
-          </video>
-          <img id="105" class="play-button" onClick="playPause(this.id)" src="https://s3-us-west-2.amazonaws.com/facepop/play-button.png">
+          <div class="video-mask">
+            <video id="video105" class="product-video">
+              <source src="https://s3-us-west-2.amazonaws.com/facepop/video/video-105.mp4" type="video/mp4">
+              Your browser does not support HTML5 video.
+            </video>
+            <img id="105" class="play-button" onClick="playPause(this.id)" src="https://s3-us-west-2.amazonaws.com/facepop/play-button.png">
+          </div>
         </div>
   		</div>
   		<div class="col-md-4">
   			<p class="product-question">
-		  		ARE THEY MEMES OR PHOTOS OF YOUR HEAD?<br>
-				No Way!
+		  		ARE THEY MEMES OR PHOTOS OF YOUR HEAD?
 		  	</p>
         <div class="product-video-container">
-          <video id="video40" class="product-video">
-            <source src="https://s3-us-west-2.amazonaws.com/facepop/video/video-40.mp4" type="video/mp4">
-            Your browser does not support HTML5 video.
-          </video>
-          <img id="40" class="play-button" onClick="playPause(this.id)" src="https://s3-us-west-2.amazonaws.com/facepop/play-button.png">
+          <div class="video-mask">
+            <video id="video83" class="product-video">
+              <source src="https://s3-us-west-2.amazonaws.com/facepop/video/video-83.mp4" type="video/mp4">
+              Your browser does not support HTML5 video.
+            </video>
+            <img id="83" class="play-button" onClick="playPause(this.id)" src="https://s3-us-west-2.amazonaws.com/facepop/play-button.png">
+          </div>
         </div>
   		</div>
   		<div class="col-md-4">
   			<p class="product-question">
-		  		ARE THEY ANIMATED EMOJIS?<br>
-				Nope!
+		  		ARE THEY ANIMATED EMOJIS?
 		  	</p>
         <div class="product-video-container">
-          <video id="video83" class="product-video">
-            <source src="https://s3-us-west-2.amazonaws.com/facepop/video/video-83.mp4" type="video/mp4">
-            Your browser does not support HTML5 video.
-          </video>
-          <img id="83" class="play-button" onClick="playPause(this.id)" src="https://s3-us-west-2.amazonaws.com/facepop/play-button.png">
+          <div class="video-mask">
+            <video id="video40" class="product-video">
+              <source src="https://s3-us-west-2.amazonaws.com/facepop/video/video-40.mp4" type="video/mp4">
+              Your browser does not support HTML5 video.
+            </video>
+            <img id="40" class="play-button" onClick="playPause(this.id)" src="https://s3-us-west-2.amazonaws.com/facepop/play-button.png">
+          </div>
         </div>
   		</div>
   	</div>
@@ -67,11 +76,19 @@
       <b>FACEPOP IS THE NEW COOL KID ON THE BLOCK WITH INTENSE FOCUS TO SPARK A NEW MESSAGING TREND</b>
     </p><hr>
     <p>
-      <b>WE WELCOME YOU TO JOIN US AND SHAKE UP THE WORLD OF MESSAGING WITH A COMMUNICATION TOOL GEARED TO IMPROVE CONSICENESS, CLARITY AND EFFICIENCY</b>
+      <b>FACEPOP WILL SPARK A NEW HOT TREND WHILE IMPROVING CONSICENESS, CLARITY AND EFFICIENCY DURING ONE’S MESSAGING EXPERIENCE.</b>
     </p><hr>
-    <p>
-      <b>LET’S GET FACEPOPPIN’</b>
-    </p>
+    
+  	<div class="product-video-container">
+      <div class="video-mask">
+        <video id="video20" class="product-video-footer">
+          <source src="https://s3-us-west-2.amazonaws.com/facepop/video/video-20.mp4" type="video/mp4">
+          Your browser does not support HTML5 video.
+        </video>
+        <img id="20" class="play-button" onClick="playPause(this.id)" src="https://s3-us-west-2.amazonaws.com/facepop/play-button.png">
+      </div>
+    </div>
+
 
   </div>
 
@@ -86,14 +103,11 @@ function playPause(clicked_id) {
 
     if (myVideo.paused) {
         myVideo.play(); 
-        controllerImage.src = 'https://s3-us-west-2.amazonaws.com/facepop/pause-button.png';
-    }
-    else {
-        myVideo.pause(); 
-        controllerImage.src = 'https://s3-us-west-2.amazonaws.com/facepop/play-button.png';
+        $('#'+clicked_id).hide();
     }
 
     myVideo.onended = function() {
+      $('#'+clicked_id).show();
       controllerImage.src = 'https://s3-us-west-2.amazonaws.com/facepop/play-button.png';
     };
         

@@ -44,7 +44,22 @@ section {
 
 .hero-title {
 	padding: 200px 0;
+	font-size: 205px;
 	position: relative;
+}
+
+.hero-title-container {
+	position: relative;
+}
+
+.hero-slogan {
+	font-size: 64px;
+	position: absolute;
+	bottom: 0;
+	margin-left: auto;
+	margin-right: auto;
+	left: 0;
+	right: 0;
 }
 
 .hero-image {
@@ -56,9 +71,43 @@ section {
 	background-repeat: no-repeat;
     background-size: contain;
     background-position: center; 
-	height: 400px;
+	height: 512px;
 	width: 400px;
 	margin: auto;
+	position: relative;
+}
+
+.play-button-phone {
+	height: 60px;
+    width: 60px;
+    position: absolute;
+    left: 45px;
+    bottom: 43px;
+}
+
+.product-phone-video-container {
+	margin-top: 0px;
+    position: absolute;
+    top: 136px;
+    left: 102px;
+}
+
+.product-video-phone {
+    width: 289px;
+    height: 152px;
+    position: absolute;
+    top: 0px;
+    left: -68px;
+}
+
+.video-mask-phone {
+    width: 141px;
+    height: 156px;
+    border-radius: 125px;
+    margin: auto;
+    margin-top: 40px;
+    position: relative;
+    -webkit-mask-image: -webkit-radial-gradient(circle, white 100%, black 100%);
 }
 
 .hero-section {
@@ -85,33 +134,34 @@ section {
 
 div p {
 	text-align: center;
-	font-size: 20px;
+	font-size: 26px;
 }
 
 .survey-content p {
 	text-align: center;
-	font-size: 20px;
+	font-size: 26px;
+}
+
+.survey-button {
+	width: 55% !important;
 }
 
 .question-counter p {
-	text-align: left;
+	text-align: center;
 	padding-top: 10px;
 	font-family: "A Love of Thunder";
-	color: #4B88D3;
+	
 }
 
 .product-section {
-	color: #5F5D5D;
+	background-color: #4B88D3;
+	color: #FFFFFF;
 }
 
 .product-video-container {
 	text-align: center;
 	position: relative;
-	margin-top: 10px;
-}
-
-.product-video {
-	width: 420px;
+	margin-top: 30px;
 }
 
 .product-question {
@@ -124,17 +174,69 @@ div p {
 }
 
 .play-button {
-	height: 40px;
-	width: 40px;
+	height: 80px;
+	width: 80px;
 	position: absolute;
-	left: 30px;
-	bottom: 30px;
+	left: 86px;
+	bottom: 82px;
+}
+
+.video-mask {
+  width: 250px;
+  height: 250px;
+  border-radius: 125px;
+  margin: auto;
+  position: relative;
+  -webkit-mask-image: -webkit-radial-gradient(circle, white 100%, black 100%);
+}
+
+.product-video {
+  width: 500px;
+  height: 500px;
+  position: absolute;
+  top: -111px;
+  left: -100px;
+}
+
+.product-video-footer {
+  width: 500px;
+  height: 500px;
+  position: absolute;
+  top: -111px;
+  left: -118px;
+}
+
+.contact-video-footer {
+  width: 500px;
+  height: 500px;
+  position: absolute;
+  top: -111px;
+  left: -100px;
 }
 
 .team-bio {
 	text-align: center;
 	font-size: 20px;
 	padding-top: 30px;
+
+	&_images {
+		height: 200px;
+		position: relative;
+	}
+
+	&_image {
+		width: 200px;
+		bottom: 0;
+	    position: absolute;
+	    margin-left: auto;
+	    margin-right: auto;
+	    left: 0;
+	    right: 0;
+	}
+}
+
+.button-font-large {
+	font-size: 26px !important;
 }
 
 .social {
@@ -143,6 +245,23 @@ div p {
 
 .social-links {
 	padding: 0 5px;
+}
+
+.footer-videos {
+	text-align: center;
+	padding-top: 50px;
+}
+
+.footer-video {
+	margin:	0 10px;
+}
+
+.team-video-footer {
+  width: 500px;
+  height: 500px;
+  position: absolute;
+  top: -111px;
+  left: -111px;
 }
 
 @media only screen and (max-width: 675px) {
@@ -158,6 +277,14 @@ div p {
 
 	.product-video {
 		width: 340px;
+	}
+
+	.survey-button {
+		width: 90% !important;
+	}
+
+	.button-font-large {
+		font-size: 20px !important;
 	}
 
 	section {
