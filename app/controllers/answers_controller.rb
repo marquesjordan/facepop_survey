@@ -4,12 +4,19 @@ class AnswersController < ApplicationController
   # GET /answers
   # GET /answers.json
   def index
-    @answers = Answer.all
+    if current_user.admin == true
+      @answers = Answer.all
+    else
+      redirect_to root_path
+    end
   end
 
   # GET /answers/1
   # GET /answers/1.json
   def show
+    if current_user.admin == false
+      redirect_to root_path
+    end
   end
 
   # GET /answers/new
