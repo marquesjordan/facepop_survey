@@ -36,6 +36,7 @@ nav.navbar {
 	font-family: "A Love of Thunder";
 	font-size: 136px;
 	text-align: center;
+	color: #FFFFFF;
 }
 
 section {
@@ -45,7 +46,13 @@ section {
 .hero-title {
 	padding: 200px 0;
 	font-size: 205px;
+	line-height: .9;
 	position: relative;
+
+	&__trademark {
+		font-size: 50px;
+		vertical-align: top;
+	}
 }
 
 .hero-title-container {
@@ -55,7 +62,7 @@ section {
 .hero-slogan {
 	font-size: 64px;
 	position: absolute;
-	bottom: 0;
+	bottom: -33px;
 	margin-left: auto;
 	margin-right: auto;
 	left: 0;
@@ -100,6 +107,11 @@ section {
     left: -68px;
 }
 
+.product-list {
+	font-size: 26px;
+	line-height: 1.3;
+}
+
 .video-mask-phone {
     width: 141px;
     height: 156px;
@@ -114,14 +126,15 @@ section {
 	background-image: url('https://s3-us-west-2.amazonaws.com/facepop/fp_logo.png');
     background-repeat: no-repeat;
     background-size: contain;
-    background-position: center; 
-	background-color: #4B88D3;
+    background-position: center;
+	background-color: #FE9A41;
 	color: #FFFFFF;
 	text-align: center;
 }
 
 .survey-section {
 	background-color: #FE9A41;
+	color: #FFFFFF;
 }
 
 .team-section {
@@ -171,6 +184,7 @@ div p {
 .contact-section {
 	background-color: #5F5D5D;
 	color: #FFFFFF;
+	overflow: hidden;
 }
 
 .play-button {
@@ -214,6 +228,10 @@ div p {
   left: -100px;
 }
 
+.team {
+	padding-top: 40px;
+}
+
 .team-bio {
 	text-align: center;
 	font-size: 20px;
@@ -232,6 +250,15 @@ div p {
 	    margin-right: auto;
 	    left: 0;
 	    right: 0;
+	}
+
+	&__content {
+		text-align: left;
+	}
+
+	&__title {
+		margin-top: 10px;
+		height: 80px;
 	}
 }
 
@@ -263,6 +290,15 @@ div p {
   top: -111px;
   left: -111px;
 }
+
+
+@media only screen and (min-width: 992px) {
+	.team-bio {
+		height: 1350px;
+		font-size: 24px;
+	}
+}
+
 
 @media only screen and (max-width: 675px) {
 	.page-title {
