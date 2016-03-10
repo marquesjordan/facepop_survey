@@ -2,9 +2,12 @@
 
 <% @questions.each do |question| %>
   <div>
-    <div class="question_label">
-      <%= question.question %> <b> Total Votes: <%= question.votes %></b>
+    <div class="container">
+      <div class="question_label">
+        <%= question.question %> <b> Total Votes: <%= question.votes %></b>
+      </div>
     </div>
+    
     <div class="container">
       <table class="table table-bordered table-striped">
           <tr>
