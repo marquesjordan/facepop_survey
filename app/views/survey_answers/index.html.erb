@@ -19,7 +19,7 @@
             <th>16 - 35</th>
             <th>36 or higher</th>
           </tr>
-        <% question.answers.order("order").each do |answer| %>
+        <% question.answers.order(:order).each do |answer| %>
             <tr>
               <td><%= answer.answer %></td>
               <td><%= answer.votes %></td>    
