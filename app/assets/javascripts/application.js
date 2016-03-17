@@ -19,4 +19,9 @@
 
 $(window).load(function(){
     $('#myModal').modal('show');
+
+    $('#myModal').on('hidden.bs.modal', function () {
+    	$( "div" ).removeClass( "blur" );
+	});
 });
+
