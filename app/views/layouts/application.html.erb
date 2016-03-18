@@ -22,15 +22,5 @@
 
 <%= yield %>
 
-<% if current_user %>
-<%= link_to "Logout", destroy_user_session_path, method: :delete %>
-	
-<% if warden.user.admin == true %>
-	 ihihihiih
-<% end %><%= %>
-<% else %>
-<%= link_to "Login", new_user_session_path %>
-<% end %>
-
 </body>
 </html>
