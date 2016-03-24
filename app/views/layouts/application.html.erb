@@ -1,10 +1,15 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>FacepopSurvey</title>
+	<title>Facepop</title>
 	<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
 	<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
 	<%= csrf_meta_tags %>
+	<meta property="og:url"           content="https://www.facebook.com/facepopapp/" />
+	<meta property="og:type"          content="website" />
+	<meta property="og:title"         content="Facepop" />
+	<meta property="og:description"   content="WE ARE A FLEDGLING MOBILE APPLICATION MOTIVATED TO RESHAPE YOUR MESSAGING EXPERIENCE WITH A RECOGNIZABLE MOTION VISUAL EFFECT; THE TALKING HEAD" />
+	<meta property="og:image"         content="https://s3-us-west-2.amazonaws.com/facepop/social/icon_facebook_like.png" />
 
 
 	<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.5.9/slick.css"/>
@@ -19,6 +24,14 @@
 	<script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.5.9/slick.min.js"></script>
 </head>
 <body>
+<div id="fb-root"></div>
+	<script>(function(d, s, id) {
+	  var js, fjs = d.getElementsByTagName(s)[0];
+	  if (d.getElementById(id)) return;
+	  js = d.createElement(s); js.id = id;
+	  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1";
+	  fjs.parentNode.insertBefore(js, fjs);
+	}(document, 'script', 'facebook-jssdk'));</script>
 
 <%= yield %>
 

@@ -229,22 +229,36 @@ div p {
 }
 
 .video-mask {
-  width: 250px;
-  height: 250px;
+  width: 200px;
+  height: 200px;
   border-radius: 125px;
   margin: auto;
   position: relative;
   -webkit-mask-image: -webkit-radial-gradient(circle, white 100%, black 100%);
 }
 
-.product-video {
-  width: 500px;
-  height: 500px;
-  position: absolute;
-  top: -111px;
-  left: -100px;
+.contact-video-mask {
+	width: 200px;
+	height: 200px;
 }
 
+.product-video {
+	width: 376px;
+    height: 361px;
+    position: absolute;
+    top: -82px;
+    left: -75px;
+    overflow: hidden;
+}
+
+.product-video-play-image {
+	height: 80px;
+    width: 80px;
+    position: absolute;
+    left: 58px;
+    bottom: 58px;
+}
+	
 .product-video-group {
 	text-align: center;
 
@@ -265,11 +279,12 @@ div p {
 }
 
 .contact-video-footer {
-  width: 500px;
-  height: 500px;
-  position: absolute;
-  top: -111px;
-  left: -100px;
+    width: 376px;
+    height: 361px;
+    position: absolute;
+    top: -82px;
+    left: -75px;
+    overflow: hidden;
 }
 
 .team {
@@ -341,6 +356,10 @@ div p {
 
 .social-links {
 	padding: 0 5px;
+	text-decoration: none;
+}
+a.social-links:hover {
+	background-color: transparent;
 }
 
 .footer-videos {
@@ -359,6 +378,31 @@ div p {
   top: -111px;
   left: -111px;
 }
+
+.survey-link {
+	text-decoration: none;
+}
+
+.survey-btn {
+	border: 2px solid #4B88D3; 
+	background-color:#2aabd2; 
+	border-radius:6px; 
+	width:100%; 
+	padding: 10px 10px; 
+	margin: 10px 0; 
+	font-size:20px; 
+	text-align:left; 
+	color: #FFF; 
+	font-weight: bold; 
+	text-decoration: none;
+}
+
+.survey-btn:hover{ 
+	background-color:#FFFFFF;
+	color: #2aabd2;
+	text-decoration: none;
+}
+
 
 
 @media only screen and (min-width: 992px) {
@@ -380,16 +424,34 @@ div p {
 		font-size: 73px;
 	}
 
+	.hero-title {
+		font-size: 73px;
+	}
+
+	.hero-slogan {
+		font-size: 24px;
+		position: initial;
+	}
+
+	.hero-title__trademark {
+		font-size: 27px;
+	}
+
 	.product-video {
 		width: 340px;
 	}
 
 	.survey-button {
 		width: 90% !important;
+		font-size: 20px;
 	}
+
 
 	.button-font-large {
 		font-size: 20px !important;
+		width: 36px;
+		float: left;
+
 	}
 
 	section {
