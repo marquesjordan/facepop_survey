@@ -380,7 +380,7 @@ a.social-links:hover {
 }
 
 .survey-link {
-	text-decoration: none;
+	text-decoration: none !important;
 }
 
 .survey-btn {
@@ -403,12 +403,19 @@ a.social-links:hover {
 	text-decoration: none;
 }
 
+	.mobile-show {
+		left: 262px;
+	}
 
 
 @media only screen and (min-width: 992px) {
 	.team-bio {
 		height: 100%;
 		font-size: 24px;
+	}
+
+	.mobile-show {
+		display: none;
 	}
 }
 

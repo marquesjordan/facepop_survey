@@ -27,9 +27,7 @@
           <% question.answers.order(:order).each_with_index do |answer, answer_index| %>
             <div style="position:relative;">
 
-              <%= link_to survey_answers_path(:vote_id => @current_vote, :question_id => question.id, :answer_id => answer.id), {style: "text-decoration: none"}, method: :post, remote: true do %>
-                <%= content_tag :div, answer.answer, :class => "survey-btn" %>
-              <% end %>
+              <%= link_to "<div class='survey-btn'> #{answer.answer} </div>".html_safe, survey_answers_path(:vote_id => @current_vote, :question_id => question.id, :answer_id => answer.id), method: :post, class: "survey-link", remote: true %>
 
             </div>
             
