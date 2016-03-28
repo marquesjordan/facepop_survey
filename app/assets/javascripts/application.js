@@ -22,6 +22,6 @@ $(window).load(function(){
 
      $('#myModal').on('hidden.bs.modal', function () {
     	 $( "div" ).removeClass( "blur" );
-	});
+	 });
 });
 

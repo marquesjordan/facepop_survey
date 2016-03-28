@@ -412,6 +412,15 @@ a.social-links:hover {
 	font-size: 35px;
 }
 
+
+.social-link-icon {
+	width: 75px;
+}
+
+section {
+	overflow: hidden;
+}
+
 @media only screen and (min-width: 992px) {
 	.team-bio {
 		height: 100%;
@@ -424,6 +433,10 @@ a.social-links:hover {
 }
 
 @media only screen and (min-device-width: 375px) and (max-device-width: 760px) {
+	section {
+		overflow: hidden;
+	}
+
 	.hero-title {
 		font-size: 161px;
 	} 
@@ -461,6 +474,14 @@ a.social-links:hover {
 		color: #FE9A41;
 		font-weight: bold;
 	}
+
+	.social-link-icon {
+		width: 45px;
+	}
+
+	.play-button-modal {
+		left: 148px;
+	}
 }
 
 
@@ -472,11 +493,11 @@ a.social-links:hover {
 
 @media only screen and (max-width: 480px) {
 	.page-title {
-		font-size: 73px;
+		font-size: 65px;
 	}
 
 	.hero-title {
-		font-size: 73px;
+		font-size: 65px;
 	}
 
 	.hero-slogan {
@@ -511,5 +532,8 @@ a.social-links:hover {
 
 	.play-button {
 		left: 50px;
+	}
+	.play-button-modal {
+		left: 148px;
 	}
 }
