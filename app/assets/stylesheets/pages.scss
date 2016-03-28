@@ -454,15 +454,15 @@ section {
 	}
 
 	.survey-button {
-		width: 90% !important;
+		width: 100% !important;
 	}
 
 	.survey-btn {
-		font-size: 30px;
+		font-size: 18px;
 	}
 
 	.survey-questions {
-		font-size: 45px;
+		font-size: 25px;
 	}
 
 	.team-bio__title {
@@ -470,7 +470,7 @@ section {
 	}
 
 	.product-questions {
-		font-size: 35px !important;
+		font-size: 22px !important;
 		color: #FE9A41;
 		font-weight: bold;
 	}
@@ -481,6 +481,18 @@ section {
 
 	.play-button-modal {
 		left: 148px;
+	}
+
+	.product-list {
+		min-height: 80px;
+	}
+
+	.survey-content p {
+		font-size: 20px;
+	}
+
+	.team-bio__title {
+		font-size: 20px;
 	}
 }
 
