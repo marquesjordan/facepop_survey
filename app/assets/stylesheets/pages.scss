@@ -131,6 +131,7 @@ section {
 .product-list {
 	font-size: 26px;
 	line-height: 1.3;
+	min-height: 175px;
 }
 
 .product-table {
@@ -407,6 +408,9 @@ a.social-links:hover {
 		left: 262px;
 	}
 
+.survey-questions {
+	font-size: 35px;
+}
 
 @media only screen and (min-width: 992px) {
 	.team-bio {
@@ -416,6 +420,46 @@ a.social-links:hover {
 
 	.mobile-show {
 		display: none;
+	}
+}
+
+@media only screen and (min-device-width: 375px) and (max-device-width: 760px) {
+	.hero-title {
+		font-size: 161px;
+	} 
+
+	div p, li {
+		font-size: 15px;
+	}
+
+	.product-question {
+		font: 15px !important;
+	}
+
+	.product-video-group__item {
+		display: inherit;
+	}
+
+	.survey-button {
+		width: 90% !important;
+	}
+
+	.survey-btn {
+		font-size: 30px;
+	}
+
+	.survey-questions {
+		font-size: 45px;
+	}
+
+	.team-bio__title {
+		font-size: 35px;
+	}
+
+	.product-questions {
+		font-size: 35px !important;
+		color: #FE9A41;
+		font-weight: bold;
 	}
 }
 
