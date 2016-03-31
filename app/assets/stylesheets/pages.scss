@@ -442,7 +442,7 @@ section {
 	} 
 
 	div p, li {
-		font-size: 15px;
+		font-size: 10px;
 	}
 
 	.product-question {
@@ -451,6 +451,14 @@ section {
 
 	.product-video-group__item {
 		display: inherit;
+		position: absolute;
+    bottom: 0;
+    left: -47px;
+	}
+
+	.col-xs-4 {
+		position: relative;
+    height: 450px;
 	}
 
 	.survey-button {
@@ -458,15 +466,11 @@ section {
 	}
 
 	.survey-btn {
-		font-size: 18px;
+		font-size: 26px;
 	}
 
 	.survey-questions {
-		font-size: 25px;
-	}
-
-	.team-bio__title {
-		font-size: 35px;
+		font-size: 32px;
 	}
 
 	.product-questions {
@@ -476,7 +480,7 @@ section {
 	}
 
 	.social-link-icon {
-		width: 45px;
+		width: 70px;
 	}
 
 	.play-button-modal {
@@ -487,12 +491,16 @@ section {
 		min-height: 80px;
 	}
 
-	.survey-content p {
+	.product-list li {
 		font-size: 20px;
 	}
 
 	.team-bio__title {
-		font-size: 20px;
+		font-size: 37px;
+	}
+
+	.team-bio__content{
+		font-size: 15px;
 	}
 }
 
