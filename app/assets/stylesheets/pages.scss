@@ -434,7 +434,7 @@ section {
 	}
 }
 
-@media only screen and (min-device-width: 375px) and (max-device-width: 760px) {
+@media only screen and (min-device-width: 360px) and (max-device-width: 760px) {
 	section {
 		overflow: hidden;
 	}
@@ -509,7 +509,7 @@ section {
 	}
 }
 
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 360px) {
 	.page-title {
 		font-size: 65px;
 	}
