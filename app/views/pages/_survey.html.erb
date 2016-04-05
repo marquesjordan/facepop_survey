@@ -12,10 +12,10 @@
         <img id="13" class="play-button product-video-play-image" onClick="playPause(this.id)" src="https://s3-us-west-2.amazonaws.com/facepop/play-button.png">
       </div>
     </div>
-		<p>
-			FACEPOP IS IN THE EARLY STAGES OF BETA. YOUR INPUT IS IMPORTANT TO US AND TOGETHER WE 
-			CAN MAKE FACEPOP UNDENIABLE!
-		</p>
+		  <div class="main-text" style="margin:10px 0;">
+  			FACEPOP IS IN THE EARLY STAGES OF BETA. YOUR INPUT IS IMPORTANT TO US AND TOGETHER WE 
+  			CAN MAKE FACEPOP UNDENIABLE!
+		  </div>
 
 	</div>
   <hr>
@@ -43,8 +43,8 @@
     </div>
   </div>
   <div id="question-counter" class="question-counter">
-    <p>
+    <div class="main-text">
       Question <span id="question-number">1</span> of <%= @questions.count %>
-    </p>
+    </div>
   </div>
 </section>

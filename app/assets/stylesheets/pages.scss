@@ -76,7 +76,7 @@ section {
 }
 
 .hero-slogan {
-	font-size: 64px;
+	font-size: 36px;
 	position: absolute;
 	bottom: -33px;
 	margin-left: auto;
@@ -179,6 +179,17 @@ section {
 div p {
 	text-align: center;
 	font-size: 26px;
+}
+
+.main-text {
+	text-align: center;
+	font-size: 24px;
+}
+
+.copy-text {
+	font-size: 11px;
+	text-align: center; 
+	margin-top: 30px;
 }
 
 .survey-content p {
@@ -434,13 +445,13 @@ section {
 	}
 }
 
-@media only screen and (min-device-width: 360px) and (max-device-width: 760px) {
+@media only screen and (min-device-width: 320px) and (max-device-width: 760px) {
 	section {
 		overflow: hidden;
 	}
 
 	.hero-title {
-		font-size: 161px;
+		font-size: 149px;
 	} 
 
 	div p, li {
@@ -476,8 +487,7 @@ section {
 	}
 
 	.product-questions {
-		font-size: 22px !important;
-		color: #FE9A41;
+		font-size: 18px !important;
 		font-weight: bold;
 	}
 
@@ -500,6 +510,18 @@ section {
 	.team-bio__content{
 		font-size: 20px;
 	}
+
+	.product-list-group {
+		min-height: 170px;
+	}
+
+	.main-text {
+		font-size: 12px;
+	}
+
+	.copy-text {
+		font-size: 9px;
+	}
 }
 
 
@@ -519,7 +541,7 @@ section {
 	}
 
 	.hero-slogan {
-		font-size: 24px;
+		font-size: 18px;
 		position: initial;
 	}
 
