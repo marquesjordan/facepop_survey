@@ -25,8 +25,8 @@
               <td><%= answer.votes %></td>    
               <td><%= ( (answer.votes.to_f / question.votes) * 100 ).round(0) %>%</td>
               <td>
-                  Male: <%= ( (SurveyAnswer.where(:answer_id => answer.id).where(:gender => 'Male').count.to_f / question.votes) * 100 ).round(0) %>%
-                  Female: <%= ( (SurveyAnswer.where(:answer_id => answer.id).where(:gender => 'Female').count.to_f / question.votes) * 100 ).round(0) %>%
+                  Male: <%= ( (SurveyAnswer.where(:answer_id => answer.id).where(:gender => 'Male').count.to_f / answer.votes) * 100 ).round(0) %>%
+                  Female: <%= ( (SurveyAnswer.where(:answer_id => answer.id).where(:gender => 'Female').count.to_f / answer.votes) * 100 ).round(0) %>%
               </td>
               <td><%= ( (SurveyAnswer.where(:answer_id => answer.id).where(:age => '15 or lower').count.to_f / question.votes) * 100 ).round(0) %>%</td>
               <td><%= ( (SurveyAnswer.where(:answer_id => answer.id).where(:age => '16 - 35').count.to_f / question.votes) * 100 ).round(0) %>%</td>
