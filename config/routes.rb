@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
   
-  devise_for :users
+  
   root 'pages#home'
-
+  devise_for :users
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
 
   resources :survey_answers

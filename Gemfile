@@ -12,7 +12,6 @@ gem "nested_form"
 gem 'rails_admin'
 gem 'sdoc', '0.4.0', group: :doc
 gem 'devise'
-gem "cancan"
 
 group :development, :test do
     gem 'sqlite3', '1.3.9'

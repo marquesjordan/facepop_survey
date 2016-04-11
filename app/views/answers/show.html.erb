@@ -1,19 +1,18 @@
-<p id="notice"><%= notice %></p>
+<% if current_user.admin == true %>
 
-<p>
-  <strong>Answer:</strong>
-  <%= @answer.answer %>
-</p>
+<h1>Go To Admin</h1>
 
-<p>
-  <strong>Votes:</strong>
-  <%= @answer.votes %>
-</p>
+<h2><%= link_to "Click here to go to Admin", '/admin' %></h2>
 
-<p>
-  <strong>Vote ratio:</strong>
-  <%= @answer.vote_ratio %>
-</p>
+<%= link_to 'Back To Home', root_path %>
 
-<%= link_to 'Edit', edit_answer_path(@answer) %> |
-<%= link_to 'Back', answers_path %>
+<% else %>
+
+<% if current_user %>
+  <%= link_to "Logout", destroy_user_session_path, method: :delete %>
+<% else %>
+  <%= link_to "Login", new_user_session_path %>
+<% end %><br>
+
+<% end %>
+

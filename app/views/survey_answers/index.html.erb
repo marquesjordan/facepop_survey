@@ -1,3 +1,6 @@
+<% if current_user.admin == true %>
+
+  <%= link_to "Logout", destroy_user_session_path, method: :delete %>
 
 
 <% @questions.order("created_at").each do |question| %>
@@ -36,4 +39,9 @@
       </table>
     </div>  
   </div>
+<% end %>
+
+
+<% else %>
+<h1><%= link_to "Login", new_user_session_path %></h1>
 <% end %>

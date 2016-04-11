@@ -1,24 +1,18 @@
-<p id="notice"><%= notice %></p>
+<% if current_user.admin == true %>
 
-<p>
-  <strong>Age:</strong>
-  <%= @visitor.age %>
-</p>
+<h1>Go To Admin</h1>
 
-<p>
-  <strong>Gender:</strong>
-  <%= @visitor.gender %>
-</p>
+<h2><%= link_to "Click here to go to Admin", '/admin' %></h2>
 
-<p>
-  <strong>Email:</strong>
-  <%= @visitor.email %>
-</p>
+<%= link_to 'Back To Home', root_path %>
 
-<p>
-  <strong>Zip:</strong>
-  <%= @visitor.zip %>
-</p>
+<% else %>
 
-<%= link_to 'Edit', edit_visitor_path(@visitor) %> |
-<%= link_to 'Back', visitors_path %>
+<% if current_user %>
+  <%= link_to "Logout", destroy_user_session_path, method: :delete %>
+<% else %>
+  <%= link_to "Login", new_user_session_path %>
+<% end %><br>
+
+<% end %>
+
