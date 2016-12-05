@@ -16,9 +16,9 @@
   		WE ARE A FLEDGLING MOBILE APPLICATION MOTIVATED TO RESHAPE YOUR MESSAGING EXPERIENCE WITH A RECOGNIZABLE MOTION VISUAL EFFECT; THE TALKING HEAD.
   	</div>
   	<div class="main-text" style="margin-bottom:15px;">
-  		FACEPOP (PATENT PENDING) WILL ALLOW USERS TO CREATE AND SHARE SELF-MADE TALKING HEAD VIDEOS VIA TEXT MESSAGING AND/OR SOCIAL MEDIA PLATFORMS.
+  		THE PATENT PENDING FACEPOP ALGORITHM WILL ALLOW USERS TO CREATE AND SHARE SELF-MADE TALKING HEAD VIDEOS VIA TEXT MESSAGING AND/OR SOCIAL MEDIA PLATFORMS.
   	</div>
-    
+
     <div class="main-text" style="margin:15px 0;">
     	YOUR SNAPPY FACEPOP MESSAGE MAY INCLUDE:
     </div>
@@ -45,7 +45,7 @@
         </div>
         <div class="product-video-group">
           <div class="product-video-group__item">
-            
+
             <div class="product-video-container">
               <div class="video-mask contact-video-mask">
                 <video poster="https://s3-us-west-2.amazonaws.com/facepop/poster105.png" id="video105" class="contact-video-footer">
@@ -77,7 +77,7 @@
           <p class="product-questions">ARE THEY PHOTOS?</p>
         </div>
         <div class="product-video-group__item">
-          
+
           <div class="product-video-container">
             <div class="video-mask contact-video-mask">
               <video poster="https://s3-us-west-2.amazonaws.com/facepop/poster83.png" id="video83" class="contact-video-footer">
@@ -87,7 +87,7 @@
               <img id="83" class="play-button product-video-play-image" onClick="playPause(this.id)" src="https://s3-us-west-2.amazonaws.com/facepop/play-button.png">
             </div>
           </div>
-        </div>        
+        </div>
       </div>
       <div class="col-xs-4">
         <div class="product-list-group">
@@ -108,7 +108,7 @@
           <p class="product-questions">ANIMATED EMOJIS?</p>
         </div>
         <div class="product-video-group__item">
-          
+
           <div class="product-video-container">
             <div class="video-mask contact-video-mask">
               <video poster="https://s3-us-west-2.amazonaws.com/facepop/poster75.png" id="video40" class="contact-video-footer">
@@ -120,7 +120,7 @@
           </div>
         </div>
     </div>
-  		
+
 
 
   </div>
@@ -131,15 +131,15 @@
     </div>
 </section>
 
-<script> 
-function playPause(clicked_id) { 
+<script>
+function playPause(clicked_id) {
 
     var clicked_video = 'video' + clicked_id;
-    var myVideo = document.getElementById(clicked_video); 
-    var controllerImage = document.getElementById(clicked_id); 
+    var myVideo = document.getElementById(clicked_video);
+    var controllerImage = document.getElementById(clicked_id);
 
     if (myVideo.paused) {
-        myVideo.play(); 
+        myVideo.play();
         $('#'+clicked_id).hide();
     }
 
@@ -147,6 +147,6 @@ function playPause(clicked_id) {
       $('#'+clicked_id).show();
       controllerImage.src = 'https://s3-us-west-2.amazonaws.com/facepop/play-button.png';
     };
-        
-} 
+
+}
 </script>
