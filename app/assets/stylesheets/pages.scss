@@ -43,8 +43,8 @@ video::-webkit-media-controls {
 }
 
 .blink_me {
-	color:red; 
-	font-size:40px; 
+	color:red;
+	font-size:40px;
 	font-family: "A Love of Thunder";
 }
 
@@ -60,7 +60,7 @@ section {
 }
 
 .hero-title {
-	padding: 200px 0;
+	padding: 275px 0;
 	font-size: 205px;
 	line-height: .9;
 	position: relative;
@@ -93,7 +93,7 @@ section {
 	background-image: url('https://s3-us-west-2.amazonaws.com/facepop/android.png');
 	background-repeat: no-repeat;
     background-size: contain;
-    background-position: center; 
+    background-position: center;
 	height: 512px;
 	width: 400px;
 	margin: auto;
@@ -154,7 +154,7 @@ section {
 }
 
 .hero-section {
-	background-image: url('https://s3-us-west-2.amazonaws.com/facepop/fp_logo.png');
+	background-image: url('https://s3-us-west-2.amazonaws.com/facepop/facepop_logo_2017.png');
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
@@ -188,7 +188,7 @@ div p {
 
 .copy-text {
 	font-size: 11px;
-	text-align: center; 
+	text-align: center;
 	margin-top: 30px;
 }
 
@@ -208,7 +208,7 @@ div p {
 .question-counter p {
 	text-align: center;
 	padding-top: 10px;
-	
+
 }
 
 .product-section {
@@ -272,12 +272,12 @@ div p {
     left: 58px;
     bottom: 58px;
 }
-	
+
 .product-video-group {
 	text-align: center;
 
 	&__item {
-		display: inline; 
+		display: inline;
 		width: 370px;
 		padding-bottom: 30px;
 		text-align: center;
@@ -398,20 +398,20 @@ a.social-links:hover {
 }
 
 .survey-btn {
-	border: 2px solid #4B88D3; 
-	background-color:#2aabd2; 
-	border-radius:6px; 
-	width:100%; 
-	padding: 10px 10px; 
-	margin: 10px 0; 
-	font-size:20px; 
-	text-align:left; 
-	color: #FFF; 
-	font-weight: bold; 
+	border: 2px solid #4B88D3;
+	background-color:#2aabd2;
+	border-radius:6px;
+	width:100%;
+	padding: 10px 10px;
+	margin: 10px 0;
+	font-size:20px;
+	text-align:left;
+	color: #FFF;
+	font-weight: bold;
 	text-decoration: none;
 }
 
-.survey-btn:hover{ 
+.survey-btn:hover{
 	background-color:#FFFFFF;
 	color: #2aabd2;
 	text-decoration: none;
@@ -452,7 +452,7 @@ section {
 
 	.hero-title {
 		font-size: 149px;
-	} 
+	}
 
 	div p, li {
 		font-size: 20px;
