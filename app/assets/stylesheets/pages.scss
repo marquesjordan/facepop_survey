@@ -75,6 +75,10 @@ section {
 	position: relative;
 }
 
+.slogan-section {
+	font-size: 36px;
+}
+
 .hero-slogan {
 	font-size: 36px;
 	position: absolute;
@@ -158,6 +162,12 @@ section {
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
+	background-color: #FE9A41;
+	color: #FFFFFF;
+	text-align: center;
+}
+
+.slogan-section {
 	background-color: #FE9A41;
 	color: #FFFFFF;
 	text-align: center;
@@ -529,6 +539,10 @@ section {
 	.page-title {
 		font-size: 90px;
 	}
+
+	.slogan {
+		font-size: 18px;
+	}
 }
 
 @media only screen and (max-width: 360px) {
@@ -538,6 +552,10 @@ section {
 
 	.hero-title {
 		font-size: 65px;
+	}
+
+	.slogan-section {
+		font-size: 18px;
 	}
 
 	.hero-slogan {
