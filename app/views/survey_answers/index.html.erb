@@ -10,12 +10,12 @@
         <%= question.question %> <b> Total Votes: <%= question.votes %></b>
       </div>
     </div>
-    
+
     <div class="container">
       <table class="table table-bordered table-striped">
           <tr>
             <th>Choices</th>
-            <th>Total Votes</th>   
+            <th>Total Votes</th>
             <th>Vote Percentage</th>
             <th>Gender</th>
             <th>15 or lower</th>
@@ -25,11 +25,11 @@
         <% question.answers.order(:order).each do |answer| %>
             <tr>
               <td><%= answer.answer %></td>
-              <td><%= answer.votes %></td>    
+              <td><%= answer.votes %></td>
               <td><%= ( (answer.votes.to_f / question.votes) * 100 ).round(0) %>%</td>
               <td>
                   Male: <% if answer.votes == 0 %>0<% else %><%= ( (SurveyAnswer.where(:answer_id => answer.id).where(:gender => 'Male').count.to_f / answer.votes) * 100 ).round(0) %><% end %>%
-                  Female: <% if answer.votes == 0 %>0<% else %><%= ( (SurveyAnswer.where(:answer_id => answer.id).where(:gender => 'Female').count.to_f / answer.votes) * 100 ).round(0) %><% end %>%  
+                  Female: <% if answer.votes == 0 %>0<% else %><%= ( (SurveyAnswer.where(:answer_id => answer.id).where(:gender => 'Female').count.to_f / answer.votes) * 100 ).round(0) %><% end %>%
               </td>
               <td><% if answer.votes == 0 %>0<% else %><%= ( (SurveyAnswer.where(:answer_id => answer.id).where(:age => '15 or lower').count.to_f / answer.votes) * 100 ).round(0) %><% end %>%</td>
               <td><% if answer.votes == 0 %>0<% else %><%= ( (SurveyAnswer.where(:answer_id => answer.id).where(:age => '16 - 35').count.to_f / answer.votes) * 100 ).round(0) %><% end %>%</td>
@@ -37,7 +37,7 @@
             </tr>
         <% end %>
       </table>
-    </div>  
+    </div>
   </div>
 <% end %>
 

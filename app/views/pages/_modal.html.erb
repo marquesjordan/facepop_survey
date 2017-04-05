@@ -1,0 +1,54 @@
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" data-backdrop="static" data-keyboard="false">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+      </div>
+          <div class="product-video-container" style="margin-top:0; margin-bottom:20px;">
+            <div class="video-mask contact-video-mask">
+              <video poster="https://s3-us-west-2.amazonaws.com/facepop/poster25.png" id="video161" class="contact-video-footer" autoplay>
+                <source src="https://s3-us-west-2.amazonaws.com/facepop/video/video-161.mp4" type="video/mp4">
+                Your browser does not support HTML5 video.
+              </video>
+            </div>
+            <img id="161" class="play-button play-button-modal mobile-show product-video-play-image" onClick="playPause(this.id)" src="https://s3-us-west-2.amazonaws.com/facepop/play-button.png">
+        </div>
+      <%= form_for(@visitor, remote: true) do |f| %>
+
+        <div class="modal-body">
+            <% if @visitor.errors.any? %>
+              <div id="error_explanation">
+                <h2><%= pluralize(@visitor.errors.count, "error") %> prohibited this visitor from being saved:</h2>
+
+                <ul>
+                <% @visitor.errors.full_messages.each do |message| %>
+                  <li><%= message %></li>
+                <% end %>
+                </ul>
+              </div>
+            <% end %>
+
+            <div class="field">
+                <%= f.select :age, options_for_select(["15 or lower", "16 35", "36 or higher"]), {prompt: "Select Age Group"}, {required: true, class: 'form-control input-lg'} %>
+            </div>
+            <div class="field">
+                <%= f.select :gender, options_for_select(["Male", "Female"]), {prompt: "Select Gender"}, {required: true, class: 'form-control input-lg'} %>
+            </div>
+            <div class="field">
+              <%= f.text_field :email, :required => true, :pattern => '[^@]+@[^@]+\.[a-zA-Z]{2,6}', :placeholder => "Enter Your Email", class: "form-control input-lg" %>
+            </div>
+            <div class="field">
+              <%= f.number_field :zip, :required => true, :placeholder => "Enter Your Zip", class: "form-control input-lg" %>
+            </div>
+            <div class="actions">
+
+            </div>
+
+        </div>
+        <div class="modal-footer">
+          <%= f.submit 'Submit', :class => "btn btn-primary" %>
+        </div>
+      <% end %>
+
+    </div>
+  </div>
+</div>

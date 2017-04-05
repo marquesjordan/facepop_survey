@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
-  
-  
+
+
   root 'pages#home'
   devise_for :users
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   resources :answers
   resources :questions
   resources :visitors
+  resources :contacts
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
