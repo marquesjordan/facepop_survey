@@ -1,20 +1,25 @@
-<section class="email-section">
+<section class="email-section" style="padding: 100px 0;">
 	<div class="container">
 		<div class="row">
 			<div class="col-md-6 col-md-offset-3">
 				<div style="text-align: center; padding-bottom: 20px; font-size: 25px;">
-					SIGN UP for Updates
+					Sign Up for Updates
 				</div>
 				<%= form_for Contact.new, {class: "form-inline"} do |f| %>
 						<div class="col-xs-10">
 							<%= f.text_field :email, :required => true, :pattern => '[^@]+@[^@]+\.[a-zA-Z]{2,6}', :placeholder => "Enter Your Email", class: "form-control input-lg" %>
 						</div>
 						<div class="col-xs-2">
-							<%= f.submit 'Submit', :class => "btn btn-primary btn-lg" %>
+							<%= f.submit 'Submit', :class => "btn btn-primary btn-lg sub-btn" %>
 						</div>
 
 				<% end %>
+
 			</div>
+
+		</div>
+		<div style="text-align: center; padding: 50px; font-size: 35px;">
+			UNDER CONSTRUCTION
 		</div>
 	</div>
 
